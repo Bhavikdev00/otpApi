@@ -7,6 +7,7 @@ const app = express();
 const port = process.env.PORT; // or any other port you prefer
 
 app.use(bodyParser.json());
+app.use(cors());
 
 app.post('/sendOtp', async (req, res) => {
   const { email, otp } = req.body;
